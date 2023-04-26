@@ -1,0 +1,116 @@
+.teacher{
+    padding: 80px 0;
+    p{
+        text-align: center;
+    }
+    h2{
+        font-weight: 700;
+        color: $darkBlue;
+        padding: 20px 0 50px;
+        font-size: 50px;
+        @media(max-width:991px){
+            br{
+                display: contents;
+            }
+        }
+    }
+    #level{
+        border: 0;
+        padding-bottom: 20px;
+        li{
+            padding: 5px 10px;
+            a{
+                padding: 0;
+                 border: 0;
+                color: #011928;
+                &.active{
+                    font-weight: 600;
+                     border: 0;
+                      color: $headingColor;
+                     border-bottom: 1px solid $headingColor;
+                }
+            }
+        }
+    }
+    #myTabContent{
+        background-color: #fafafa;
+    }
+    #teacher{
+        padding: 40px;
+
+        a{
+            &.nav-link{
+                color: $headingColor;
+                font-size: 20px;
+                padding: 20px 0px;
+                width: 50%;
+                font-weight: 600;
+                span{
+                    display: block;
+                    font-size: 14px;
+                    color: #81868a;
+                    text-transform: uppercase;
+                }
+                &.active{
+                    span{
+                        color: $mainColor;
+                    }
+                    color: $mainColor;
+                    background-color: transparent;
+                }
+            }
+        }
+        /*        a{
+                    width: 48%;
+                    float: left;
+                    padding: 0;
+                    display: inline-block;
+                }*/
+    }
+    #teacherContent{
+        .card{
+            border-radius: 0;
+            border: 0;
+            img{
+                border-radius: 0;
+            }
+            .card-body{
+                background-color: #00000030;
+                background-blend-mode:overlay;
+                position: absolute;
+                /*                height: 100%;*/
+                /*display: flex;*/
+                /*justify-content: flex-end;*/
+                bottom: 0;
+                color: #f0f3f3;
+                h5{
+                    font-weight: 600;
+                }
+                span{
+                    display: block;
+                    font-size: 14px;
+                    color: #f0f3f3;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+                .links{
+                    a{
+                        i {
+                            border-radius: 40px;
+                            transition: 0.3s all;
+                            color: $whiteColor;
+                            padding: 10px;
+                            &:hover {
+                                color: $mainColor;
+                            }
+                        }
+                    }
+                }
+                p{
+                    text-align: left;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

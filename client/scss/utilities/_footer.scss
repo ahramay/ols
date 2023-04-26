@@ -1,0 +1,130 @@
+#footer {
+  .widgets {
+    background-color: $darkBlue;
+    color: #fff;
+    padding: 50px 0;
+    ul {
+      li {
+        a {
+          color: inherit;
+          padding: 5px 0;
+          transition: 0.3s all;
+          &:hover {
+            color: $mainColor;
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+  }
+  .widgets_end {
+    padding: 50px 0;
+    color: #000;
+    border-bottom: 2px solid #011928;
+    p {
+      margin-bottom: 5px;
+    }
+    a {
+      color: $mainColor;
+      transition: 0.4s all;
+      text-decoration: none;
+      &:hover {
+        padding-left: 10px;
+      }
+    }
+    .social {
+      a {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        transition: 0.4s all;
+        background: #fff;
+        font-size: 25px;
+        padding: 15px 20px;
+        i {
+          color: #000;
+
+          transition: 0.4s all;
+        }
+        &:hover {
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+          i {
+            color: $mainColor;
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    padding: 20px 0;
+    p {
+      margin: 0;
+      span {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+.side {
+  position: fixed;
+  z-index: 5;
+  .btn-2 {
+    position: fixed;
+    bottom: 85px;
+    margin-left: 10px;
+    left: 5px;
+    background-color: #00006a;
+    color: #000 !important;
+    text-align: center;
+    padding: 12px;
+    line-height: 1;
+    border-radius: 50%;
+    width: 50px;
+    z-index: 9999;
+    height: 50px;
+  }
+  a {
+    font-size: 24px;
+    text-decoration: none;
+    i {
+      color: $whiteColor !important;
+    }
+  }
+  .btn-1 {
+    position: fixed;
+    bottom: 94px;
+    margin-right: 10px;
+    right: 20px;
+    background-color: #4dc247;
+    color: #000 !important;
+    text-align: center;
+    padding: 12px;
+    line-height: 1;
+    border-radius: 50%;
+    width: 50px;
+    z-index: 9999;
+    height: 50px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.footerlink-item {
+  min-width: calc(100% / 3);
+
+  & .nav-link {
+    color: #fff;
+    transition: 0.3s all;
+    &:hover {
+      color: $mainColor !important;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .footerlink-item {
+    min-width: 100%;
+  }
+}

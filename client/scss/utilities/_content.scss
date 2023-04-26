@@ -1,0 +1,163 @@
+.content {
+  // Contact Page Style
+  .contact_info {
+    text-align: center;
+    padding: 80px 0;
+    .card {
+      transition: 0.3s all;
+      border-color: #f1f1f1;
+      .card-body {
+        padding: 40px 30px;
+        h5 {
+          font-weight: 600;
+          margin: 20px 0;
+        }
+        p {
+          font-size: 16px;
+          color: #81868a;
+        }
+      }
+      &:hover {
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+      }
+    }
+  }
+  .contact_links {
+    padding: 70px 0;
+    background-color: #fafafa;
+    text-align: center;
+
+    h2 {
+      font-weight: 700;
+      color: $darkBlue;
+      padding: 20px 0 40px;
+      font-size: 40px;
+      @media (max-width: 991px) {
+        br {
+          display: contents;
+        }
+      }
+    }
+    a {
+      color: #292929;
+      text-decoration: none;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      transition: 0.4s all;
+      /*    padding: 15px 20px;*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        background-color: $mainColor;
+        color: $whiteColor;
+      }
+      i {
+        font-size: 30px;
+      }
+    }
+    .width_ini {
+      width: 60%;
+      margin: 20px auto;
+      display: block;
+    }
+  }
+  .contact_form {
+    padding: 50px 0;
+    h2 {
+      text-align: center;
+      font-weight: 700;
+      color: $darkBlue;
+      padding: 20px 0 40px;
+      font-size: 40px;
+      @media (max-width: 991px) {
+        br {
+          display: contents;
+        }
+      }
+    }
+    .form_contact {
+      input.form-control {
+        background: #fafafa;
+        height: 65px !important;
+        border-radius: 0 !important;
+        border: 0;
+        font-size: 14px !important;
+      }
+      textarea {
+        background: #fafafa;
+        border-radius: 0 !important;
+        border: 0;
+        font-size: 14px !important;
+      }
+    }
+  }
+  //How to Pay Page Style
+  .how_to {
+    padding: 80px 0;
+    h2 {
+      font-weight: 700;
+      color: $darkBlue;
+      padding: 20px 0;
+      font-size: 40px;
+      @media (max-width: 991px) {
+        br {
+          display: contents;
+        }
+      }
+    }
+    p {
+      font-weight: 500;
+    }
+  }
+  .process_pay {
+    background-color: #fafafa;
+    padding: 70px 0;
+    text-align: center;
+    .count {
+      h2 {
+        background-color: #1e252d;
+        color: $whiteColor;
+        font-weight: 700;
+        font-size: 70px;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px auto;
+      }
+    }
+    h6 {
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+  //Why Out Class Page Style
+  .why_page_content {
+    padding: 100px 0 50px;
+  }
+}
+.why_data {
+  padding: 0 0 50px;
+  .bg_1 {
+    background-color: #fafafa;
+    padding: 50px 0;
+  }
+  .bg_2 {
+    padding: 50px 0;
+  }
+
+  h2 {
+    color: $headingColor;
+    font-size: 40px;
+    font-weight: 700;
+  }
+}

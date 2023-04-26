@@ -1,0 +1,92 @@
+.blog {
+    padding: 50px 0;
+    .card {
+        transition: 0.3s all;
+        margin-top: 20px;
+        &:hover{
+            box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+        }
+        .card-header {
+            padding: 0;
+        }
+
+        .card-body {
+            text-align: center;
+            padding: 20px 10px;
+
+            h5 {
+                font-weight: 700;
+                color: $headingColor;
+
+                a {
+                    text-decoration: none;
+                    color: $headingColor;
+                    text-decoration: none;
+                    &:hover{
+                        transition: 0.3s all;
+                        color: #00abef;
+                    }
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: $headingColor;
+                text-decoration: none;
+                &.link{
+                    transition: 0.3s all;
+                    color: $headingColor;
+                    &:hover{
+                        color: $mainColor;
+                    }
+                }
+            }
+
+            p {
+                color: #81868a;
+                font-size: 14px;
+            }
+
+            .social {
+                width: 60%;
+                margin: 0 auto 10px;
+                .col-4{
+                    padding: 0 5px;
+                }
+                i {
+                    border-radius: 40px;
+                    transition: 0.3s all;
+                    background-color: #f1f1f1;
+
+                    padding: 10px;
+                    color: #81868a;
+                    &:hover {
+                        background-color: #00abef;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+/*    a.learn {
+        background-color: #00acf0;
+        color: #fff;
+        transition: 0.4s all;
+        padding: 13px 40px;
+        font-weight: 600;
+        border-radius: 25px;
+        margin: 20px auto;
+        display: block;
+        width: 25%;
+        border: 1px solid #00abef;
+        text-decoration: none;
+        text-align: center;
+        &:hover{
+            background-color: #ffffff;
+            color: #00abef;
+        }
+    }*/
+    .more{
+        margin: 50px auto 20px;
+    }
+}

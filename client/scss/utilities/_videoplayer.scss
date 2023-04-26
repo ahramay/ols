@@ -1,0 +1,74 @@
+.course-video-wrapper {
+  position: relative;
+  & div[data-vjs-player="true"] {
+    height: 450px !important;
+  }
+
+  .video-overlay {
+    position: absolute;
+  }
+}
+
+@media (max-width: 450px) {
+  .course-video-wrapper {
+    & div[data-vjs-player="true"] {
+      height: 240px !important;
+    }
+  }
+}
+@media (max-width: 540px) {
+  .course-video-wrapper {
+    & div[data-vjs-player="true"] {
+      height: 290px !important;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .course-video-wrapper {
+    & div[data-vjs-player="true"] {
+      height: 320px !important;
+    }
+  }
+}
+
+.vjs-watermark-content.vjs-watermark-top-right {
+  position: absolute;
+  color: #ccc !important;
+  opacity: 0.5;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+button.vjs-big-play-button {
+  z-index: 1;
+}
+
+.video-js .vjs-volume-menu-button {
+  display: none;
+}
+.video-js.vjs-fullscreen .vjs-volume-menu-button {
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .video-js .vjs-picture-in-picture-control.vjs-control.vjs-button {
+    display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .vjs-mute-control.vjs-control.vjs-button,
+  .vjs-volume-panel.vjs-control.vjs-volume-panel-horizontal,
+  .video-js .vjs-picture-in-picture-control.vjs-control.vjs-button,
+  .vjs-control.vjs-button.vjs-icon-previous-item,
+  .vjs-control.vjs-button.vjs-icon-next-item,
+  .vjs-remaining-time.vjs-time-control.vjs-control {
+    display: none !important;
+  }
+}

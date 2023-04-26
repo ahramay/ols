@@ -1,0 +1,472 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@import "../assets/fonts/poppins/poppins.css";
+/*!
+    Created on : Jul 24, 2020, 1:58:15 PM
+    Author     : Faizan
+*/
+$mainColor: #00acf0;
+$PoppinsFont: "Poppins", sans-serif;
+$darkBlue: #011928;
+$headingColor: #012237;
+$lightBackground: #f1f1f1;
+$whiteColor: #fff;
+*:focus {
+  outline: 0;
+  box-shadow: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $PoppinsFont;
+  transition: 0.4s all !important;
+}
+@import "utilities/_navbar.scss";
+@import "utilities/_footer.scss";
+@import "utilities/_slider.scss";
+@import "utilities/_homeCmponents.scss";
+@import "utilities/_coursesComponents.scss";
+@import "utilities/_mainComponents.scss";
+@import "utilities/_content.scss";
+@import "utilities/_events.scss";
+@import "utilities/_conditions.scss";
+@import "utilities/_eventDetails.scss";
+@import "utilities/_aboutComponent.scss";
+@import "utilities/_popups.scss";
+@import "utilities/_blog.scss";
+@import "utilities/_faqs.scss";
+@import "utilities/_countdown.scss";
+@import "utilities/_blogDetail.scss";
+@import "utilities/_teachers.scss";
+@import "utilities/_forum.scss";
+@import "utilities/_cart.scss";
+@import "utilities/_dashboard.scss";
+@import "utilities/_coursesDetail.scss";
+@import "utilities/_responsive.scss";
+@import "utilities/videoplayer";
+@import "utilities/toast";
+@import "utilities/flipcount";
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 999px !important;
+  }
+}
+
+// custom
+
+Form .covering {
+  margin-bottom: 15px;
+  position: relative;
+  input {
+    border: 1px solid transparent;
+  }
+}
+.error {
+  color: red;
+  margin: 12px 12px 0;
+  position: absolute;
+  right: 0;
+  font-size: 13px;
+  top: -8px;
+}
+
+.img-fill {
+  background-size: cover;
+  background-position: center;
+}
+
+.overlapping-loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  cursor: pointer;
+}
+
+.verify-email-form-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.verify-email-form {
+  max-width: 400px;
+  min-width: 320px;
+
+  & input {
+    box-shadow: none;
+    padding: 28px 14px;
+  }
+}
+
+.verify-email-form-img {
+  width: 250px;
+}
+
+.resend-text {
+  font-size: 12px;
+  text-align: center;
+}
+
+.checkout-form input {
+  box-shadow: none;
+  padding: 28px 14px;
+}
+
+/////custom toggle
+
+.custom-toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 1.5rem;
+
+  input {
+    display: none;
+
+    &:checked {
+      + .custom-toggle-slider {
+        border: 1px solid #00acf0;
+        background-color: #00acf0 !important;
+        &:before {
+          background: #fff;
+          transform: translateX(1.625rem);
+        }
+      }
+    }
+
+    // &:disabled {
+    //   + .custom-toggle-slider {
+    //     border: 1px solid $custom-control-indicator-disabled-bg;
+    //   }
+
+    //   &:checked {
+    //     + .custom-toggle-slider {
+    //       border: 1px solid $custom-control-indicator-disabled-bg;
+
+    //       &:before {
+    //         background-color: lighten(
+    //           $custom-control-indicator-checked-bg,
+    //           10%
+    //         );
+    //       }
+    //     }
+    //   }
+    // }
+  }
+}
+
+.custom-toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #cad1d7;
+  border-radius: 34px !important;
+  background-color: transparent;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+    border-radius: 50% !important;
+    background-color: #00acf0;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+/////custom toggle
+
+.blog_details figure {
+  width: 100% !important;
+}
+figure div[data-oembed-url] {
+  width: 100% !important;
+}
+
+.free-video-list-item {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 15px;
+
+  & .image-container {
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+
+    @media (max-width: 576px) {
+      height: 180px;
+    }
+  }
+
+  & .video-name {
+    padding: 5px;
+    font-weight: bold;
+    color: rgb(0, 172, 240);
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-decoration: none;
+  }
+  & .video-desc {
+    padding: 5px;
+    padding-top: 0;
+    text-align: center;
+    margin-bottom: 0px;
+    text-decoration: none;
+    color: rgb(33, 37, 41);
+  }
+  & .video-name:hover,
+  & .video-desc:hover {
+    text-decoration: none;
+  }
+}
+
+.choose-course-banner {
+  padding: 40px 0px;
+  background-color: #c0e404;
+}
+.monthly-plan-banner-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.monthly-plan-btn {
+  background-color: rgb(0, 172, 240);
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  border-radius: 25px;
+  padding: 6px 20px;
+  transition: all 0.4s ease 0s;
+
+  &:hover {
+    background-color: rgb(0, 172, 240);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+}
+
+.youtube-video-iframe {
+  display: flex;
+  justify-content: center;
+  background: black;
+  max-width: 1111px;
+  min-width: 250px;
+  margin: auto;
+
+  @media (min-width: 700px) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+.text-main {
+  color: $mainColor !important;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 5px;
+  right: 11px;
+  font-size: 20px;
+  color: black;
+}
+
+.modal-badge-img {
+  width: "100%";
+}
+
+.courses-check-list {
+  max-width: 350px;
+  margin: auto;
+}
+
+.MuiSvgIcon-root,
+.PrivateSwitchBase-input-4,
+.MuiCheckbox-colorSecondary.Mui-checked,
+.MuiTouchRipple-root {
+  fill: $mainColor !important;
+  color: $mainColor !important;
+
+  &:hover {
+    fill: $mainColor !important;
+    color: $mainColor !important;
+  }
+}
+
+.next-btn {
+  background-color: $mainColor;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 25px;
+  font-size: 20px;
+  padding: 8px 40px;
+  border: none;
+  margin-bottom: 30px;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}
+
+.sub-back-btn {
+  background-color: #ffffff;
+  color: black;
+  font-weight: 600;
+  border-radius: 25px;
+  font-size: 20px;
+  padding: 8px 40px;
+  border: 2px solid black;
+  margin-bottom: 30px;
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.sub-modal-wrapper {
+  max-width: 700px;
+  min-width: 200px;
+  margin: auto;
+}
+
+.sub-details {
+  background: #ecffa0;
+}
+
+.plan-btn {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+  &.active {
+    background: #c0e404;
+    border: 1px solid #c0e404;
+  }
+}
+
+.square {
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  & .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.home-teacher-card {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+
+  .home-teacher-info {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    & * {
+      color: #ffffff !important;
+    }
+  }
+
+  &:hover .home-teacher-info {
+    display: block;
+  }
+}
+
+.yellow-btn {
+  background: #c0e404 !important;
+  border-color: #c0e404 !important;
+
+  &:hover {
+    color: #c0e404 !important;
+    background: #ffffff !important;
+  }
+}
+
+.course_video_title {
+  max-width: 500px;
+}
+.cardCustom {
+  min-height: 400px;
+  max-height: 400px;
+  background: url("../assets/img/bluebg.png");
+}
+
+.course-testimonial-wrapper {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 15px;
+  border: 1px solid black;
+
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    background: #ffffff;
+    bottom: -30px;
+    height: 30px;
+    width: 40px;
+    right: 15%;
+  }
+
+  &::after {
+    clip-path: polygon(100% 0, 30px 100%, 0 0);
+  }
+
+  &::before {
+    bottom: -31px;
+    height: 31px;
+    width: 42px;
+    right: calc(15% - 1px);
+    background: black;
+    clip-path: polygon(100% 0, 31px 100%, 0 0);
+  }
+}
+
+.teacher-home-first-block {
+  @media (max-width: 600px) {
+    & * {
+      text-align: center !important;
+    }
+  }
+}
+
+.subscription-page-top-text *,
+.home_sub_top_text * {
+  text-align: center;
+}

@@ -1,0 +1,57 @@
+<tr>
+  <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
+    <table border="0" cellpadding="0" cellspacing="0" width="480">
+      <!-- COPY -->
+      <tr>
+        <td
+          bgcolor="#ffffff"
+          align="left"
+          style="padding: 20px 30px 0px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;"
+        >
+          <h3>Hi {{user_name}}!</h3>
+          <p style="margin: 0;">
+            Your subscription for following
+            {{category_name}}
+            courses is about to end. Click on the below subscribe button to
+            re-subscribe.</p>
+          <h4>Courses :</h4>
+          <ul>
+            {{#each courses}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td
+          bgcolor="#ffffff"
+          align="center"
+          style="padding: 20px 30px 60px 30px;"
+        >
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td
+                align="center"
+                style="border-radius: 3px; background: #00acf0"
+              >
+
+                <a
+                  href="https://www.out-class.org/subscribe"
+                  target="_blank"
+                  style="font-size: 20px; font-family: Helvetica, Arial, sans-serif;
+                                            color: #fff; text-decoration: none; padding: 15px 25px;
+                                            border-radius: 2px; border: none; display: inline-block;"
+                >Subscribe</a>
+
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <!-- BULLETPROOF BUTTON -->
+
+    </table>
+  </td>
+</tr>
+<!-- COPY CALLOUT -->

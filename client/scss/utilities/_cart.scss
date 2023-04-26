@@ -1,0 +1,193 @@
+.pro_cart {
+  padding: 80px 0;
+  .table {
+    thead {
+      tr {
+        th {
+          border: 0;
+        }
+      }
+    }
+    tbody {
+      tr {
+        th {
+          border: 0;
+          border-bottom: 0;
+        }
+        td {
+          border: 0;
+          border-bottom: 1px solid #dee2e6;
+          vertical-align: middle;
+          font-weight: 500;
+          i {
+            font-size: 20px;
+          }
+          .card {
+            border: 0;
+            border-radius: 0;
+            .card-body {
+              padding: 0;
+              .left_block {
+                width: 20%;
+                float: left;
+                img {
+                  width: 100%;
+                }
+              }
+              .right_block {
+                width: 80%;
+                float: left;
+                display: table-cell;
+                vertical-align: middle;
+                margin: auto;
+                align-self: center !important;
+                padding: 10px 0 0 30px;
+                h3 {
+                  font-size: 24px;
+                  font-weight: 700;
+                  color: $headingColor;
+                  span {
+                    color: $mainColor;
+                    font-weight: 500;
+                    font-size: 18px;
+                    display: block;
+                    margin-top: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .more {
+    width: 100%;
+    font-weight: 500;
+    padding: 10px;
+    margin: 0;
+    font-size: 12px;
+    &.v_2 {
+      background-color: $whiteColor;
+      color: $mainColor;
+      border-color: $mainColor;
+      &:hover {
+        background-color: $mainColor;
+        color: $whiteColor;
+      }
+    }
+  }
+}
+.payment_method {
+  padding-bottom: 50px;
+  .payment_options {
+    background-color: #f9f8fa;
+    padding: 30px 50px;
+    form {
+      .col-lg-6 {
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+      .col-12 {
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+      .row {
+        margin: 0 -5px;
+      }
+      .form-control {
+        border-color: #babbc0;
+      }
+      .more {
+        width: auto;
+        display: inline-block;
+        padding: 6px 40px;
+      }
+    }
+    button {
+      &[aria-expanded="true"] {
+        &:before {
+          background-color: #000;
+        }
+      }
+      color: #242424;
+      font-weight: 600;
+      position: relative;
+      padding-left: 30px;
+      &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 11px;
+        width: 12px;
+        height: 12px;
+        border: 2px solid #242424;
+        border-radius: 50%;
+      }
+      &:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+    .card {
+      border: 0;
+      border-top: 1px solid #d1d1d3;
+      border-radius: 0;
+      .card-body {
+        background-color: #f9f8fa;
+      }
+      &:first-child {
+        border-top: 0;
+      }
+    }
+  }
+  .bill {
+    margin-top: 20px;
+    .card {
+      border: 0;
+      background-color: #f9f8fe;
+
+      .card-body {
+        padding: 10px;
+        h5 {
+          color: $mainColor;
+          font-weight: 600;
+        }
+        table {
+          tbody {
+            tr {
+              td {
+                padding: 5px;
+                &:first-child {
+                  text-align: left !important;
+                }
+                &:last-child {
+                  text-align: right !important;
+                }
+              }
+              th {
+                &:first-child {
+                  text-align: left;
+                }
+                &:last-child {
+                  text-align: right;
+                }
+              }
+              &.discount {
+                color: $mainColor;
+              }
+
+              .more {
+                width: 80%;
+                display: block;
+                padding: 10px;
+                font-size: 13px;
+                margin: 20px auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

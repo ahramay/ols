@@ -1,0 +1,108 @@
+.event_detail{
+    padding: 80px 0;
+    img{
+        margin: 0px auto 30px;
+        display: block;
+    }
+
+    .share_box{
+        margin: 30px auto;
+
+        border: 2px solid #f1f1f1;
+        .social{
+            width: 60%;
+            margin: 0 auto;
+            padding: 30px 0;
+            a{
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                transition: .4s all;
+                background: #fff;
+                padding: 15px 20px;
+                i{
+                    color: #000;
+                    transition: .4s all;
+                }
+                &:hover{
+                    box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+                    i{
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+    }
+    p{
+        margin: 0;
+        font-size: 14px;
+    }
+    h4{
+        font-weight: 600;
+        font-size: 35px;
+        color: $headingColor;
+        margin: 30px 0;
+    }
+    .broker{
+        border-radius: 0;
+        border-color: #e7e7e7;
+        .card-header{
+            border-radius: 0;
+            background-color: #38b0ed;
+            color: $whiteColor;
+            p{
+                text-transform: uppercase;
+                text-align: center;
+                margin: 0;
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+        .card-body{
+            padding: 10px;
+            text-align: center;
+            table{
+                text-align: left;
+                tbody{
+                    tr{
+                        td:first-child{
+                            width: 70%;
+
+                        }
+                        td{
+                            border-bottom: 1px solid #e7e7e7;
+                            padding: 5px;
+                            .form-control{
+                                border-radius: 0;
+                                &:focus{
+                                    outline: 0;
+                                    box-shadow: none;
+                                }
+                            }
+                            b{
+                                font-weight: 600;
+                            }
+                            span{
+                                color: $mainColor;
+                            }
+                        }
+                    }
+                }
+            }
+            .more{
+                width: auto;
+                display: inline-block;
+                margin: 40px auto 20px;
+            }
+            .alert.alert-warning {
+                font-size: 12px;
+                background-color: #fcf7e4;
+                color: #9e855e;
+                border-radius: 0;
+
+                padding: 5px 10px;
+
+            }
+        }
+    }
+}

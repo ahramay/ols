@@ -1,0 +1,6 @@
+{
+  "db": "mongodb://localhost:27017/OutclassLMS",
+  "jwtPrivateKey": "123456",
+  "fileSystem": "s3",
+  "mediaPath": "https://outclasslms.s3.ap-south-1.amazonaws.com/"
+}

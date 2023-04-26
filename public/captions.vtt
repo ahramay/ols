@@ -1,0 +1,283 @@
+WEBVTT
+
+00:00.840 --> 00:04.010
+You've got a very basic server side rendering set up put together.
+
+00:04.020 --> 00:06.630
+But there are certainly some rough edges around it.
+
+00:06.630 --> 00:12.540
+Let me point out one big issue with our current setup if I flip on over to my code editor and open up
+
+00:12.540 --> 00:16.790
+the home dot G-S file I can change the content of this component.
+
+00:16.830 --> 00:23.970
+Like let's say I say I'm the best home component if I now save this file go back to the browser and
+
+00:23.970 --> 00:25.380
+refresh the page.
+
+00:25.830 --> 00:27.500
+Nothing happened here.
+
+00:27.570 --> 00:34.380
+So right now we have a very static build process every single time we run that web pack script it read
+
+00:34.380 --> 00:41.040
+bundles our entire application but it doesn't watch our project directory for any changes to any files.
+
+00:41.040 --> 00:46.230
+In addition whenever we change that web pack script or whenever we rebuild our bundle there's nothing
+
+00:46.230 --> 00:50.290
+to make our node server automatically restart and use the new code.
+
+00:50.640 --> 00:56.940
+So in reality what we probably want to do is to make sure that any time any one of our project files
+
+00:56.940 --> 01:03.810
+gets changed we then immediately rerun our web pack's script and then immediately restart our server
+
+01:03.900 --> 01:06.560
+to use the new bundle that was created.
+
+01:06.570 --> 01:11.460
+So these are two changes that we're going to have to make to both are packaged not just on file and
+
+01:11.460 --> 01:17.190
+maybe another location or two to make sure that whenever we added a project file the server automatically
+
+01:17.190 --> 01:21.080
+restarts with a new and updated code.
+
+01:21.220 --> 01:26.590
+Let's first start off by taking care of making sure that web pack will automatically rerun any time
+
+01:26.590 --> 01:31.350
+we change a project file back inside of my code editor.
+
+01:31.420 --> 01:37.420
+I'm going to find my package not just on file in of here I'm going to find my scripts where we currently
+
+01:37.420 --> 01:42.290
+have that one script to build our server to the very end of this command.
+
+01:42.310 --> 01:47.260
+I'm going to add on dash dash watch this option right here.
+
+01:47.260 --> 01:51.430
+We'll make sure that well-packed doesn't just run one time and exit.
+
+01:51.610 --> 01:53.790
+Instead what pack will run.
+
+01:53.820 --> 01:59.650
+It'll build an initial bundle and then it will continue to run and watch to see if any of our project
+
+01:59.650 --> 02:01.040
+files are changed.
+
+02:01.120 --> 02:06.820
+Then whenever they are updated it will automatically rerun and rebuild our bundle.
+
+02:06.850 --> 02:11.530
+Now that's just one of the two things we have to make sure that happens whenever we change a project
+
+02:11.530 --> 02:14.680
+file after well-packed is completed running.
+
+02:14.680 --> 02:20.040
+We then need to make sure that we automatically restart our server as well to restart the server.
+
+02:20.050 --> 02:26.620
+We're going to use a tool called Node 1 node mon is a little command line tool that allows us to automatically
+
+02:26.620 --> 02:30.460
+restart node whenever some watched file changes.
+
+02:30.640 --> 02:35.510
+Essentially it's not unlike that watch option that we just turned on with web pack.
+
+02:35.770 --> 02:41.170
+If you want to read more about Nodong you can always check out the NPM registry and take a look at the
+
+02:41.170 --> 02:46.580
+gnomon module inside of here you can see some of the different documentation on how to use it.
+
+02:46.630 --> 02:49.380
+But of course we're going to set it up from scratch right now.
+
+02:49.900 --> 02:54.850
+So to set up a node month script we're going to go back to a package.
+
+02:54.870 --> 03:04.000
+Jay sun file and I'm going to add in another script we'll call this one maybe dev Colan server with
+
+03:04.000 --> 03:07.020
+this command will run node.
+
+03:07.390 --> 03:13.360
+Now with gnomon we want to make sure that we do some very particular options or there some very particular
+
+03:13.360 --> 03:14.950
+things we want to make sure occur.
+
+03:15.160 --> 03:22.240
+For example we do not want to restart gnomon any time a file changes in say the sarcy directory.
+
+03:22.240 --> 03:29.030
+We really only want to restart our server whenever web PAC puts a new bundle inside of that build directory.
+
+03:29.260 --> 03:32.080
+That's the only time we want to restart the server.
+
+03:32.080 --> 03:36.630
+Otherwise we'll just be restarting the server farm more frequently than it needs to be.
+
+03:37.120 --> 03:43.000
+So to make sure that gnomon only watches that build directory we're going to add on an option of dash
+
+03:43.000 --> 03:45.700
+dash watch build.
+
+03:45.730 --> 03:50.320
+So this right here is going to make sure that Nordman only considers the files inside of this build
+
+03:50.320 --> 03:51.160
+directory.
+
+03:51.160 --> 03:54.240
+When deciding when it needs to restart.
+
+03:54.250 --> 04:00.070
+The other thing that we need to make sure happens whenever we run gnomon is to make sure that we execute
+
+04:00.160 --> 04:03.730
+the correct command to start up our node server.
+
+04:04.030 --> 04:09.880
+So any time that gnomon detects a change inside of the build directory we're going to make sure that
+
+04:09.880 --> 04:14.010
+it starts our server back up by running a very specific command.
+
+04:14.050 --> 04:22.540
+So we're going to say dash dash exec short for execute we will put an escaped double quote and the whole
+
+04:22.540 --> 04:29.500
+list out the command that we want to be executed whenever something inside that build directory changes.
+
+04:29.500 --> 04:39.450
+So we'll say node build bundle dot G-S and we'll place another escaped double quote so now whenever
+
+04:39.660 --> 04:46.620
+something inside the build directory runs no one is going to decide to rerun this command right here.
+
+04:46.620 --> 04:50.070
+Now last thing I'll make sure to do is to add a comma at the end of this line.
+
+04:50.070 --> 04:51.400
+Don't forget that one.
+
+04:51.840 --> 04:56.900
+OK so let's save this and we're going to start up both of these scripts at the same time and see how
+
+04:56.900 --> 04:58.200
+we're doing.
+
+04:58.200 --> 05:00.500
+I'm going to go back to my terminal.
+
+05:00.600 --> 05:06.360
+I'm going to start my running server by pressing control C and then I'm going to open up a second terminal
+
+05:06.360 --> 05:07.400
+window.
+
+05:07.410 --> 05:12.810
+So right now we're essentially saying that our workflow consists of running both of these commands at
+
+05:12.810 --> 05:18.290
+the same time we need one command to run one pack and one command to actually run the server.
+
+05:18.540 --> 05:19.680
+Eventually we'll commit.
+
+05:19.740 --> 05:23.310
+Well we will combine all this down to one single command.
+
+05:23.310 --> 05:27.010
+But for right now we'll leave it as two separate ones.
+
+05:27.010 --> 05:32.540
+So on one terminal window we'll run NPM run dev server.
+
+05:32.700 --> 05:37.830
+So that's going to start up our node 1 process that actually runs the server and then in the second
+
+05:37.830 --> 05:48.330
+window we'll run NPM run dev Colan build Colan server and that will of course set up the web pack script.
+
+05:48.470 --> 05:53.410
+And notice on now well-packed Pax said there was going to watch the files that it was or it would watch
+
+05:53.410 --> 05:55.980
+files and rebuild whenever they were changed.
+
+05:56.410 --> 06:03.520
+So now if we go back to our home dodgiest file Here's my component right here and I'll make another
+
+06:03.520 --> 06:03.890
+change.
+
+06:03.880 --> 06:07.960
+This same thing I'll say on the very very best home component.
+
+06:07.960 --> 06:11.480
+Now when I save this file I can go back over to my terminal.
+
+06:11.660 --> 06:14.080
+Westpac has already updated very quickly.
+
+06:14.080 --> 06:16.990
+You'll see that it did the initial build output right here.
+
+06:16.990 --> 06:20.170
+And here's the second billed output from the change that we just made.
+
+06:20.170 --> 06:25.870
+And then also on the left hand side you'll notice that our node one server automatically restarted when
+
+06:25.870 --> 06:28.250
+well-packed was finished running as well.
+
+06:28.300 --> 06:33.860
+So now we can flip back over to our browser refresh local host Colom 3000.
+
+06:34.180 --> 06:36.760
+And we get the updated text on the screen.
+
+06:36.760 --> 06:37.910
+Perfect.
+
+06:37.960 --> 06:38.240
+OK.
+
+06:38.260 --> 06:42.290
+So this definitely really kind of smoothes out our development workflow.
+
+06:42.310 --> 06:47.080
+Now we don't have to rerun web pack or restart the server manually all the time.
+
+06:47.120 --> 06:52.240
+All we have to do is make sure we are running those two scripts and then we can edit files as we please.
+
+06:52.240 --> 06:54.460
+Now this is definitely a pretty good amount smoother.
+
+06:54.670 --> 06:56.350
+But there's still a lot that we need to do.
+
+06:56.380 --> 06:58.040
+So let's continue in the next video.

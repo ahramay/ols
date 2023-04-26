@@ -1,0 +1,78 @@
+.faqs_detail{    
+    .student_faqs{
+        padding: 50px 0;
+        h2{
+            text-align: left;
+            font-weight: 600;
+            color: $headingColor;
+            padding: 20px 0 20px;
+            font-size: 50px;
+        }
+        .card{
+            border-radius: 0;
+            margin-bottom: 5px;
+            border: 1px solid #f1f1f1;
+            background-color: #f6f6f6;
+            &.active{
+                .card-header {
+                    background-color: $mainColor;
+                    h2{
+                        button{
+                            color: #fff;
+                        }
+                    }
+                }
+            } 
+            i{
+                padding-right: 30px;
+            }
+            .card-body{
+                background-color: #f6f6f6;
+                font-size: 14px;
+                padding: 20px 70px;
+            }
+            .active-acc{
+                transition: .3s all;
+                background-color: $mainColor;
+                h2{
+                    button{
+                        color: #fff;
+                    }
+                }
+            }
+            h2{
+                padding: 0;
+                button{
+                    font-size: 20px;
+                    font-weight: 600;
+                    transition: .3s all;
+                    padding-left: 40px;
+                    position: relative;
+                    &:focus{
+                        outline: 0;
+                        box-shadow: none;
+                    }
+                    &[aria-expanded=true]{
+                        transition: .3s all;
+                        &:before{
+                            content: "\f056";
+                            transition: .3s all;
+                        }
+                    }
+                    &:before{
+                        transition: .3s all;
+                        position: absolute;
+                        left: 0;
+                        content: "\f055";
+                        font-family: "Font Awesome 5 Pro";
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+    }
+    /*    .card-header .btn[aria-expanded=true] {
+    color: #fff;
+    background-color: #32bdb6;
+    }*/
+}

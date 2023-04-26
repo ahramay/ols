@@ -1,0 +1,179 @@
+{
+  "name": "OutclassAdmin",
+  "version": "1.0.0",
+  "description": "OutclassAdmin",
+  "main": "index.js",
+  "author": "Usama Shehzad",
+  "license": "MIT",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "compile-sass": "node-sass src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.css",
+    "minify-sass": "node-sass src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.min.css --output-style compressed",
+    "map-sass": "node-sass src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.css --source-map true"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "@babel/core": "7.2.2",
+    "@ckeditor/ckeditor5-basic-styles": "^29.2.0",
+    "@ckeditor/ckeditor5-build-classic": "^23.1.0",
+    "@ckeditor/ckeditor5-react": "^3.0.0",
+    "@reduxjs/toolkit": "^1.4.0",
+    "@svgr/webpack": "4.1.0",
+    "array-move": "^3.0.1",
+    "axios": "^0.19.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "9.0.0",
+    "babel-jest": "23.6.0",
+    "babel-loader": "8.0.5",
+    "babel-plugin-named-asset-import": "^0.3.1",
+    "babel-preset-react-app": "^7.0.2",
+    "bfj": "6.1.1",
+    "case-sensitive-paths-webpack-plugin": "2.2.0",
+    "chart.js": "2.7.3",
+    "classnames": "2.2.6",
+    "css-loader": "1.0.0",
+    "datatables.net-bs4": "^1.10.20",
+    "dotenv": "6.0.0",
+    "dotenv-expand": "4.2.0",
+    "eslint": "5.12.0",
+    "eslint-config-react-app": "^3.0.8",
+    "eslint-loader": "2.1.1",
+    "eslint-plugin-flowtype": "2.50.1",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-react": "7.12.4",
+    "file-loader": "2.0.0",
+    "formik": "^2.2.0",
+    "fs-extra": "7.0.1",
+    "hls.js": "^0.14.16",
+    "html-webpack-plugin": "4.0.0-alpha.2",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "23.6.0",
+    "jest-pnp-resolver": "1.0.2",
+    "jest-resolve": "23.6.0",
+    "jest-watch-typeahead": "^0.2.1",
+    "joi-browser": "^13.4.0",
+    "jquery": "^3.4.1",
+    "mini-css-extract-plugin": "0.5.0",
+    "moment": "^2.24.0",
+    "node-sass": "^4.14.1",
+    "nouislider": "13.1.1",
+    "object-to-formdata": "^4.1.0",
+    "optimize-css-assets-webpack-plugin": "5.0.1",
+    "pnp-webpack-plugin": "1.2.1",
+    "postcss-flexbugs-fixes": "4.1.0",
+    "postcss-loader": "3.0.0",
+    "postcss-preset-env": "6.5.0",
+    "postcss-safe-parser": "4.0.1",
+    "rc-time-picker": "^3.7.3",
+    "react": "^17.0.2",
+    "react-app-polyfill": "^0.2.2",
+    "react-bootstrap-table-next": "^4.0.0",
+    "react-bootstrap-table2-filter": "^1.3.1",
+    "react-chartjs-2": "2.7.4",
+    "react-ckeditor-component": "^1.1.0",
+    "react-copy-to-clipboard": "5.0.1",
+    "react-cropper": "^1.3.0",
+    "react-datepicker": "^3.3.0",
+    "react-datetime": "2.16.3",
+    "react-dev-utils": "^8.0.0",
+    "react-dnd": "^14.0.2",
+    "react-dnd-html5-backend": "^14.0.0",
+    "react-dom": "17.0.2",
+    "react-dropzone": "^10.2.2",
+    "react-google-maps": "9.4.5",
+    "react-hls-player": "^1.1.0",
+    "react-phone-input-2": "^2.13.8",
+    "react-player": "^2.6.2",
+    "react-redux": "^7.1.3",
+    "react-render-html": "^0.6.0",
+    "react-router-dom": "4.3.1",
+    "react-select": "^3.1.0",
+    "react-sortable-hoc": "^1.11.0",
+    "react-spinners": "^0.6.1",
+    "react-tag-input": "^6.7.0",
+    "react-toastify": "^4.1.0",
+    "reactstrap": "7.1.0",
+    "redux": "^4.0.4",
+    "redux-form": "^8.3.7",
+    "resolve": "1.10.0",
+    "sass-loader": "7.1.0",
+    "style-loader": "0.23.1",
+    "terser-webpack-plugin": "1.2.2",
+    "url-loader": "1.1.2",
+    "uuid": "^8.3.1",
+    "webpack": "4.28.3",
+    "webpack-dev-server": "3.1.14",
+    "webpack-manifest-plugin": "2.0.4",
+    "workbox-webpack-plugin": "3.6.3",
+    "yup": "^0.29.3"
+  },
+  "devDependencies": {
+    "@types/googlemaps": "3.30.18",
+    "@types/markerclustererplus": "2.1.33",
+    "@types/react": "16.8.7",
+    "typescript": "3.3.3333",
+    "video.js": "^7.10.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts"
+    ],
+    "resolver": "jest-pnp-resolver",
+    "setupFiles": [
+      "react-app-polyfill/jsdom"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
+    ],
+    "testEnvironment": "jsdom",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+      "^.+\\.module\\.(css|sass|scss)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web",
+      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "web.ts",
+      "ts",
+      "web.tsx",
+      "tsx",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node"
+    ],
+    "watchPlugins": [
+      "/Users/usamashehzad/Desktop/Projects/admin/node_modules/jest-watch-typeahead/filename.js",
+      "/Users/usamashehzad/Desktop/Projects/admin/node_modules/jest-watch-typeahead/testname.js"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  }
+}
